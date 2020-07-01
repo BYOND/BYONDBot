@@ -52,7 +52,8 @@ export class RefDatabaseService extends BaseService {
 
     $list('dt a').each((i, e) => {
       const node = $list(e);
-      const link = BASE_URL + '/' + node.attr('href');
+      const href = node.attr('href');
+      const link = BASE_URL + '/' + href;
       const name = node.text();
       const path = link.split('#')[1];
 
@@ -84,7 +85,17 @@ export class RefDatabaseService extends BaseService {
         extraCategories
       };
 
+      const hrefEntry: IDMRefEntry = {
+        name: path,
+        description,
+        link,
+        path,
+        examples,
+        extraCategories
+      };
+
       this.refSet.add(entry);
+      this.refSet.add(hrefEntry);
     });
 
     this.presence.setPresence('with your reference');
