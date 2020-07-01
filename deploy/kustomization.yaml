@@ -3,3 +3,6 @@ commonLabels:
 resources:
   - deployments.yaml
 namespace: jenkins
+configMapGenerator:
+  - name: build-number
+    env: build-number.env
