@@ -16,6 +16,7 @@ export class ReloadRefCommand implements ICommand {
     const { message, args } = cmdArgs;
     message.reply('Reloading the ref...');
 
+    await this.databaseService.loadRefsFromHTMLAndWriteToDisk();
     this.databaseService.reloadRef();
 
     return { resultString: args };
