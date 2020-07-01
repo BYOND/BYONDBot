@@ -16,10 +16,6 @@ spec:
       containers:
       - name: byondbot
         image: stephen001/byondbot:latest
-        resources:
-          limits:
-            memory: "1Gi"
-            cpu: "500m"
         envFrom:
           - secretRef:
               name: byondbot
