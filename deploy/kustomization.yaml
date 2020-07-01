@@ -1,0 +1,5 @@
+commonLabels:
+  project: byondbot
+resources:
+  - deployments.yaml
+namespace: jenkins

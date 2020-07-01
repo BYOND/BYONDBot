@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: byondbot
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      project: byondbot
+  template:
+    metadata:
+      labels:
+        project: byondbot
+    spec:
+      containers:
+      - name: byondbot
+        image: stephen001/byondbot:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        envFrom:
+          - secretRef:
+              name: byondbot
