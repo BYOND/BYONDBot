@@ -26,7 +26,7 @@ pipeline {
 
             steps {
                 container('kubectl') {
-                    sh "echo ${env.BUILD_NUMBER} > deploy/build-number.env"
+                    sh "echo BUILD_NUMBER=${env.BUILD_NUMBER} > deploy/build-number.env"
                     sh "kubectl apply -k deploy/"
                 }
             }
