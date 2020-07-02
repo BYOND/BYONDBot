@@ -38,7 +38,7 @@
     "ava-ts": "^0.25.2",
     "nodemon": "2.0.4",
     "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
+    "tslint": "^6.1.2",
     "typescript": "^3.9.6"
   }
 }
