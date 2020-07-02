@@ -14,7 +14,7 @@ pipeline {
 
             steps {
                 container('docker') {
-                    sh "docker build -t stephen001/byondbot:latest . && docker push stephen001/byondbot:latest"
+                    sh "docker build -t byond/byondbot:latest . && docker push byond/byondbot:latest"
                 }
             }
         }
