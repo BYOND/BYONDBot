@@ -34,7 +34,7 @@
     "typescript-ioc": "^3.2.2"
   },
   "devDependencies": {
-    "ava": "^3.11.1",
+    "ava": "^3.15.0",
     "ava-ts": "^0.25.2",
     "nodemon": "2.0.4",
     "ts-node": "^10.1.0",
