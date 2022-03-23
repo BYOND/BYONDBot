@@ -30,7 +30,7 @@
     "dotenv": "^8.2.0",
     "fuzzyset-obj": "1.0.0",
     "turndown": "7.1.1",
-    "typeorm": "^0.2.34",
+    "typeorm": "^0.3.2",
     "typescript-ioc": "^3.2.2"
   },
   "devDependencies": {
